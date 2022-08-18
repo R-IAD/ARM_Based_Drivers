@@ -33,19 +33,7 @@ void MRCC_vInit(void)
 	/*3- Select Clock Switch (HSI/HSE/PLL)*/
 
 
-#if RCC_HSE_ENABLE==ENABLE
-	SET_BIT(RCC->CR,HSEON);
-	while(GET_BIT(RCC->CR,HSERDY)!=1);
-#elif RCC_HSE_ENABLE==DISABLE
-	CLR_BIT(RCC->CR,HSEON);
-#endif
 
-#if RCC_HSI_ENABLE==ENABLE
-	SET_BIT(RCC->CR,HSION);
-	while(GET_BIT(RCC->CR,HSIRDY)!=1);
-#elif RCC_HSI_ENABLE==DISABLE
-	CLR_BIT(RCC->CR,HSION);
-#endif
 
 #if RCC_PLL_ENABLE==ENABLE
 	SET_BIT(RCC->CR,PLLON);
@@ -66,6 +54,20 @@ void MRCC_vInit(void)
 
 
 	/*6- Enable The selected clock*/
+
+#if RCC_HSE_ENABLE==ENABLE
+	SET_BIT(RCC->CR,HSEON);
+	while(GET_BIT(RCC->CR,HSERDY)!=1);
+#elif RCC_HSE_ENABLE==DISABLE
+	CLR_BIT(RCC->CR,HSEON);
+#endif
+
+#if RCC_HSI_ENABLE==ENABLE
+	SET_BIT(RCC->CR,HSION);
+	while(GET_BIT(RCC->CR,HSIRDY)!=1);
+#elif RCC_HSI_ENABLE==DISABLE
+	CLR_BIT(RCC->CR,HSION);
+#endif
 //#if RCC_HSE_ENABLE == ENABLE
 //#endif
 
