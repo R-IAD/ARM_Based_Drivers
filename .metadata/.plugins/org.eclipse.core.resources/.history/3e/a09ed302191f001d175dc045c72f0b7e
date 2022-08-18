@@ -1,0 +1,106 @@
+/*
+ * GPIO_prg.c
+ *
+ *  Created on: Aug 18, 2022
+ *      Author: Riad
+ */
+
+#include "../../LIB/STD_TYPES.h"
+#include "../../LIB/BIT_MATH.h"
+
+#include "GPIO_int.h"
+#include "GPIO_prv.h"
+#include "GPIO_cfg.h"
+
+
+void MGPIO_vSetGPIODirection(u32 GPIOId , u32 PINId , u32 GPIODir )
+{
+	switch(GPIOId)
+	{
+	case GPIO_PORTA :
+		switch(PINId)
+		{
+		case GPIO_PIN0 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+			break;
+		case GPIO_PIN1 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+		case GPIO_PIN2 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+		case GPIO_PIN3 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+		case GPIO_PIN4 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+		case GPIO_PIN5 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+		case GPIO_PIN6 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+		case GPIO_PIN7 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+		case GPIO_PIN8 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+		case GPIO_PIN9 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+		case GPIO_PIN10 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+		case GPIO_PIN11 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+		case GPIO_PIN12 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+		case GPIO_PIN13 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+		case GPIO_PIN14 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+		case GPIO_PIN15 :
+			GPIOA->MODER = 0x0c000000 | (GPIODir<<PINId) ;
+
+			break;
+
+
+
+
+
+
+		}
+		break;
+	}
+}
+
+
+//	GPIOB->MODER= 0x00000281 ;
+//
+//	GPIOB->OTYPER= 0x0000ffff ;
+//
+//	GPIOB->OSPEEDR = 0x000000c1 ;
+//
+//	GPIOB->PUPDR = 0x00000100 ;
+//
+//	GPIOB->BSRR= 0x00000001 ;

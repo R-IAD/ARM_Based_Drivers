@@ -1,0 +1,29 @@
+/*
+ * RCC_cfg.h
+ *
+ *  Created on: Aug 18, 2022
+ *      Author: Riad
+ */
+
+#ifndef MCAL_RCC_RCC_CFG_H_
+#define MCAL_RCC_RCC_CFG_H_
+
+
+#define RCC_HSE_ENABLE     ENABLE
+#define RCC_HSI_RNABLE     DIASBLE
+#define RCC_PLL_ENABLE     DISABLE
+#define RCC_PLLI2S_ENABLE  DISABLE
+
+
+#define RCC_CSS_ENABLE  ENABLE
+
+/*
+ * Bypass Options :
+ *   1-NOT_BYPASS
+ *   2-BYPASS_WITH_EXT_CLOCK
+ */
+#define RCC_HSE_BYPASS  NOT_BYPASS
+
+
+
+#endif /* MCAL_RCC_RCC_CFG_H_ */

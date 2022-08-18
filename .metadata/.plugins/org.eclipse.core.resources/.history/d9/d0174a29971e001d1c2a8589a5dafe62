@@ -1,0 +1,33 @@
+/*
+ * GPIO_prv.h
+ *
+ *  Created on: Aug 18, 2022
+ *      Author: Riad
+ */
+
+#ifndef MCAL_GPIO_GPIO_PRV_H_
+#define MCAL_GPIO_GPIO_PRV_H_
+
+#define GPIOB_BASE_ADDRESS  0x40020400
+
+typedef struct
+{
+	u32 MODER       ;
+	u32 OTYPER ;
+	u32 OSPEEDER   ;
+	u32 PUPDR     ;
+	u32 IDR ;
+	u32 ODR ;
+	u32 BSRR;
+	u32 LCKR;
+	u32 AFRL ;
+	u32 AFRH ;
+
+
+}GPIOB_MemMap_t;
+
+#define GPIOB   ((volatile GPIOB_MemMap_t*)(RCCGPIOB_BASE_ADDRESS_BASE_ADDRESS))
+
+
+
+#endif /* MCAL_GPIO_GPIO_PRV_H_ */

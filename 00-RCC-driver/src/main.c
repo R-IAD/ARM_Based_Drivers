@@ -10,13 +10,18 @@
 int main (void)
 {
 	MRCC_vInit();
-	MRCC_vEnableClock(GPIOB);
+	MRCC_vEnableClock(AHB1,GPIOB);
 
-	MGPIO_vSetGPIODirection();
+
+
+	MGPIO_vSetGPIODirection(GPIO_PORTB , GPIO_PIN0 , GPIO_OUTPUT);
+	MGPIO_vSETPortOutType(GPIO_PORTB , GPIO_PIN0 , GPIO_PushPull) ;
+	MGPIO_vSetOutSpeed(GPIO_PORTB , GPIO_PIN0 , GPIO_MED_SPEED);
+
 
 	while(1)
 	{
-
+		MGPIO_VOutResetSetPin(GPIO_PORTB , GPIO_PIN0 , GPIO_SET);
 
 	}
 }

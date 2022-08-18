@@ -10,10 +10,19 @@
 
 #include "../../LIB/STD_TYPES.h"
 
+
+#define GPIOA 0
 #define GPIOB 1
+#define GPIOC 2
+
+#define AHB1  0
+#define AHB2  1
+#define APB1  2
+#define APB2  3
+
 
 void MRCC_vInit(void);
-void MRCC_vEnableClock(u32 PeripheralId);
+void MRCC_vEnableClock(u32 BusId, u32 PeripheralId);
 void MRCC_vDisableClock(/*???*/);
 
 

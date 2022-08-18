@@ -9,14 +9,20 @@
 #define MCAL_RCC_RCC_CFG_H_
 
 
-#define RCC_HSE_ENABLE ENABLE
-#define RCC_HSI_RNABLE  DIASBLE
-#define RCC_PLL_ENABLE  DISABLE
+#define RCC_HSE_ENABLE     ENABLE
+#define RCC_HSI_ENABLE     DIASBLE
+#define RCC_PLL_ENABLE     DISABLE
+#define RCC_PLLI2S_ENABLE  DISABLE
 
 
 #define RCC_CSS_ENABLE  ENABLE
 
-#define RCC_SYS_CLK   RCC_HSE
+/*
+ * Bypass Options :
+ *   1-NOT_BYPASS
+ *   2-BYPASS_WITH_EXT_CLOCK
+ */
+#define RCC_HSE_BYPASS  NOT_BYPASS
 
 
 

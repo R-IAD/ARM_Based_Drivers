@@ -1,0 +1,39 @@
+/*
+ * GPIO_int.h
+ *
+ *  Created on: Aug 18, 2022
+ *      Author: Riad
+ */
+
+#ifndef MCAL_GPIO_GPIO_INT_H_
+#define MCAL_GPIO_GPIO_INT_H_
+
+
+#define GPIO_PORTA  0
+#define GPIO_PORTB  1
+#define GPIO_PORTC  2
+
+#define GPIO_PIN0
+#define GPIO_PIN1
+#define GPIO_PIN2
+#define GPIO_PIN3
+#define GPIO_PIN4
+#define GPIO_PIN5
+#define GPIO_PIN6
+#define GPIO_PIN7
+#define GPIO_PIN8
+#define GPIO_PIN9
+#define GPIO_PIN10
+#define GPIO_PIN11
+#define GPIO_PIN12
+#define GPIO_PIN13
+#define GPIO_PIN14
+#define GPIO_PIN15
+
+
+
+void MGPIO_vSetGPIODirection(u32 GPIOId , u32 PINId , u32 GPIODir );
+
+
+
+#endif /* MCAL_GPIO_GPIO_INT_H_ */

@@ -36,15 +36,33 @@ typedef struct
 #define RCC   ((volatile RCC_MemMap_t*)(RCC_BASE_ADDRESS))
 
 
-#define CSSON  19
-#define HSEBYP 18
-#define HSEON  16
-#define HSERDY 17
-#define PLLON  24
-#define PLLI2S 26
-#define HSION  0
+#define CSSON      19
+#define HSEBYP     18
+#define HSEON      16
+#define HSERDY     17
+#define PLLON      24
+#define PLLI2S     26
+#define HSION      0
+#define HSIRDY     1
+#define PLLRDY     25
+#define PLLI2SRDY  27
+//#define
+//#define
+//#define
+//#define
+//#define
+//#define
+//#define
+//#define
+//#define
 
+#define ENABLE  1
+#define DISABLE 0
+
+
+#define GPIOAEN 0
 #define GPIOBEN 1
+#define GPIOCEN 2
 
 
 #endif /* MCAL_RCC_RCC_PRV_H_ */
